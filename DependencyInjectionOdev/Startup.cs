@@ -32,9 +32,9 @@ namespace DependencyInjectionOdev
             services.AddControllers();
 
             services.AddSingleton<IContext, Context>();
-            services.AddSingleton<ISmsSenderService, SmsSender>();  // herkese klasik ayný sms atýlacaðý için singleton kullandým.
-            services.AddTransient<IDbService, Db>();                // veritabaný sürekli güncellenebileceði için transient kullandým.
-            services.AddScoped<ICreditCartService, CreditCart>();   // kredi kartý her farklý istekte deðiþeceði için scoped kullandým.
+            services.AddSingleton<ISmsSenderService, SmsSender>();  // herkese klasik ayni sms atialacagi icin singleton kullandim.
+            services.AddTransient<IDbService, Db>();                // veritabani surekli guncellenebilecegi icin transient kullandim.
+            services.AddScoped<ICreditCartService, CreditCart>();   // kredi karti her farkli istekte degisecegi icin scoped kullandim.
 
             services.AddSwaggerGen(c =>
             {
